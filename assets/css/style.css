@@ -139,6 +139,7 @@ img {
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
+    transition: 0.4s;
 }
 
 /* NAV */
@@ -792,4 +793,39 @@ img {
 ::-webkit-scrollbar-thumb {
     background: hsl(var(--hue), 4%, 29%);
     border-radius: 0.5rem;
+}
+
+/* THEME */
+body.dark-theme {
+    --first-color-dark: hsl(var(--hue), 8%, 20%);
+    --title-color: hsl(var(--hue), 4%, 95%);
+    --text-color: hsl(var(--hue), 4%, 75%);
+    --body-color: hsl(var(--hue), 8%, 12%);
+    --container-color: hsl(var(--hue), 8%, 16%);
+}
+
+.change-theme {
+    color: var(--title-color);
+    font-size: 1.15rem;
+    cursor: pointer;
+}
+
+.nav-btns {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.dark-theme .steps-bg,
+.dark-theme .questions {
+    background-color: var(--first-color-dark);
+}
+
+.dark-theme .product-circle,
+.dark-theme .footer-subscribe {
+    background-color: var(--container-color);
+}
+
+.dark-theme .scroll-header {
+    box-shadow: 0 1px 4px hsla(var(--hue), 4%, 4%, 0.3);
 }
