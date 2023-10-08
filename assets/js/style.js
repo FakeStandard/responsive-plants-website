@@ -118,3 +118,18 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+// SCROLL REVEAL ANIMATION
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400
+})
+
+sr.reveal(`.home-data`)
+sr.reveal(`.home-img`, { delay: 500 })
+sr.reveal(`.home-social`, { delay: 600 })
+sr.reveal(`.about-img, .contact-box`, { origin: 'left' })
+sr.reveal(`.about-data, .contact-form`, { origin: 'right' })
+sr.reveal(`.steps-card, .product-card, .questions-group, .footer`, { interval: 100 })
