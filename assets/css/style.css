@@ -118,7 +118,7 @@ img {
 }
 
 .container {
-    max-width: 9698px;
+    max-width: 968px;
     margin-left: var(--mb-1-5);
     margin-right: var(--mb-1-5);
 }
@@ -828,4 +828,247 @@ body.dark-theme {
 
 .dark-theme .scroll-header {
     box-shadow: 0 1px 4px hsla(var(--hue), 4%, 4%, 0.3);
+}
+
+/* BREAKPOINTS */
+
+/* FOR SMALL DEVICES */
+@media screen and (max-width: 320px) {
+    .container {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
+
+    .home-img {
+        width: 180px;
+    }
+
+    .home-title {
+        font-size: var(--h1-font-size);
+    }
+
+    .steps-bg {
+        padding: 2rem 1rem;
+    }
+
+    .steps-card {
+        padding: 1.5rem;
+    }
+
+    .product-container {
+        grid-template-columns: 0.6fr;
+        justify-content: center;
+    }
+}
+
+/* FOR MEDIUM DEVICES */
+@media screen and (min-width: 576px) {
+    .steps-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-description {
+        padding: 0 4rem;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, 170px);
+        justify-content: center;
+        column-gap: 5rem;
+    }
+
+    .footer-subscribe {
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    body {
+        margin: 0;
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+        column-gap: 3rem;
+    }
+
+    .nav-toggle,
+    .nav-close {
+        display: none;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        column-gap: 3rem;
+    }
+
+    .nav-menu {
+        margin-left: auto;
+    }
+
+    .home-container,
+    .about-container,
+    .questions-container,
+    .contact-container,
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home {
+        padding: 10rem 0 5rem;
+    }
+
+    .home-container {
+        align-items: center;
+    }
+
+    .home-img {
+        width: 280px;
+        order: 1;
+    }
+
+    .home-social {
+        top: 30%;
+    }
+
+    .questions-container {
+        align-items: flex-start;
+    }
+
+    .footer-container {
+        column-gap: 3rem;
+    }
+
+    .footer-subscribe {
+        width: initial;
+    }
+}
+
+/* FOR LARGE DEVICES */
+@media screen and (min-width: 992px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section {
+        padding: 8rem 0 1rem;
+    }
+
+    .section-title,
+    .scetion-title-center {
+        font-size: var(--h1-font-size);
+    }
+
+    .home {
+        padding: 13em 0 5rem;
+    }
+
+    .home-img {
+        width: 350px;
+    }
+
+    .home-description {
+        padding-right: 7rem;
+    }
+
+    .about-img {
+        width: 380px;
+    }
+
+    .steps-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .steps-bg {
+        padding: 3.5rem 2.5rem;
+    }
+
+    .steps-card-title {
+        font-size: var(--normal-font-size);
+    }
+
+    .product-description {
+        padding: 0 16rem;
+    }
+
+    .product-container {
+        padding: 4rem 0;
+        grid-template-columns: repeat(3, 185px);
+        gap: 4rem 6rem;
+    }
+
+    .product-img {
+        width: 160px;
+    }
+
+    .product-circle {
+        width: 110px;
+        height: 110px;
+    }
+
+    .product-title,
+    .product-price {
+        font-size: var(--normal-font-size);
+    }
+
+    .questions-container {
+        padding: 1rem 0 4rem;
+    }
+
+    .questions-title {
+        text-align: initial;
+    }
+
+    .questions-group {
+        row-gap: 2rem;
+    }
+
+    .questions-header {
+        padding: 1rem;
+    }
+
+    .question-description {
+        padding: 0 3.5rem 2.25rem 2.75rem;
+    }
+
+    .footer-logo {
+        font-size: var(--h3-font-size);
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+    }
+
+    .footer-copy {
+        margin: 7rem 0 2rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .home-social {
+        right: -3rem;
+        row-gap: 4.5rem;
+    }
+
+    .home-social-follow {
+        font-size: var(--small-font-size);
+    }
+
+    .home-social-follow::after {
+        width: 1.5rem;
+        right: -60%;
+    }
+
+    .home-social-link {
+        font-size: 1.15rem;
+    }
+
+    .about-container {
+        column-gap: 7rem;
+    }
+
+    .scrollup {
+        right: 3rem;
+    }
 }
