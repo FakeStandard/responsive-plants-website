@@ -230,6 +230,22 @@ img {
     box-shadow: 0 1px 4px hsla(var(--hue), 4%, 15%, 0.1);
 }
 
+/* ACTIVE LINK */
+.active-link {
+    position: relative;
+    color: var(--first-color);
+}
+
+.active-link::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    width: 50%;
+    height: 2px;
+    left: 0;
+    background-color: var(--first-color);
+}
+
 /* BUTTONS */
 .button {
     display: inline-block;
